@@ -1,4 +1,6 @@
 function shouldMatchTokens(result, tokens) {
+  equals(result.length, tokens.length);
+
   for (var index = 0; index < result.length; index++) {
     equals(result[index].name, tokens[index]);
   }
@@ -154,7 +156,6 @@ describe('Tokenizer', function() {
       'OPEN',
       'ID',
       'CLOSE',
-      'CONTENT',
       'CONTENT',
       'CONTENT'
     ]);
